@@ -8,8 +8,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     curl jq build-essential
     
 RUN cd /home/docker && mkdir actions-runner && cd actions-runner
-RUN curl -o actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
-RUN tar xzf ./actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
+RUN curl -o actions-runner-linux-x64-2.298.2.tar.gz -L https://github.com/actions/runner/releases/download/v2.298.2/actions-runner-linux-x64-2.298.2.tar.gz
+RUN tar xzf ./actions-runner-linux-x64-2.298.2.tar.gz
     
 RUN chown -R docker ~docker && /home/docker/actions-runner/bin/installdependencies.sh
 
