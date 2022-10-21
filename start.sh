@@ -5,7 +5,7 @@ ACCESS_TOKEN=$ACCESS_TOKEN
 
 cd /home/docker/actions-runner
 
-./config.sh --url https://github.com/${ORGANIZATION} --token ${ACCESS_TOKEN}
+./config.sh --unattended --url https://github.com/${ORGANIZATION} --token ${ACCESS_TOKEN} --labels dev-server
 
 cleanup() {
     echo "Removing runner..."
